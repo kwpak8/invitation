@@ -11,12 +11,22 @@ body {
 }
 
 .textBox {
-	font-size: 17pt;
+	font-size: 24pt;
 	line-height: 40px;
 	background: #fff;
-	width: 200px;
 	margin-left:  50%;
 	left:  -100px;
+	position: absolute;
+}
+
+#mainTextBox {
+	font-size: 24pt;
+	line-height: 60px;
+	background: rgba(255,255,255,0.6);
+	width: 400px;
+	margin-left:  50%;
+	margin-top: 50px;
+	left:  -200px;
 	position: absolute;
 }
 
