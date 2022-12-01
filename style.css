@@ -1,17 +1,28 @@
 body {
 	margin :0;
-	background : #000;
-	color:  #fff;
-	text-align:right;
+	background : #c3d4dc;
+	color:  #444;
+	text-align:center;
+	font-family: 'Noto Serif KR', serif;
 }
 
 .pic {
 	width: 100%;
 }
 
+.textBox {
+	font-size: 17pt;
+	line-height: 40px;
+	background: #fff;
+	width: 200px;
+	margin-left:  50%;
+	left:  -100px;
+	position: absolute;
+}
+
 @media screen and (min-width:512px) and (max-width: 1024px)
 {
 	body {
-		text-align:center;
+		
 	}
 }
