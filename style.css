@@ -6,17 +6,25 @@ body {
 	font-family: 'Noto Serif KR', serif;
 }
 
-.pic {
+#container {
+	width:1024px;
+	margin:0px;
+}
+
+.picBox {
 	width: 100%;
+}
+
+#pic1 {
+	background-image: url("images/main.jpg");
+	height:1000px;
 }
 
 .textBox {
 	font-size: 24pt;
 	line-height: 40px;
 	background: #fff;
-	margin-left:  50%;
-	left:  -100px;
-	position: absolute;
+	margin: auto;
 }
 
 #mainTextBox {
@@ -24,10 +32,7 @@ body {
 	line-height: 60px;
 	background: rgba(255,255,255,0.6);
 	width: 400px;
-	margin-left:  50%;
 	margin-top: 50px;
-	left:  -200px;
-	position: absolute;
 }
 
 @media screen and (min-width:512px) and (max-width: 1024px)

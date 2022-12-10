@@ -5,18 +5,29 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2qwulw006s"></script>
 	</head>
 	<body>
-		<div class="textBox" id="mainTextBox">
-			박경원 ♥ 임수연 <br>
-			결혼합니다<p>
-			시간<br>
-			2023월 2월 25일 <p>
-			장소<br>
-			청담 더 채플<br>
+		<div id = "container">
+			<div class="picBox" id="pic1">
+				<div class="textBox" id="mainTextBox">
+					박경원 ♥ 임수연 <br>
+					결혼합니다<p>
+					시간<br>
+					2023월 2월 25일 <p>
+					장소<br>
+					청담 더 채플<br>
+				</div>
+			</div>
 		</div>
-		<div class="picBox">
-			<image class="pic" src="images/main.jpg">
-		</div>
+
+		<div id="map" style="width:100%;height:400px;"></div>
+		<script>
+		var mapOptions = {
+		    center: new naver.maps.LatLng(37.3595704, 127.105399),
+		    zoom: 10
+		};
+		var map = new naver.maps.Map('map', mapOptions);
+		</script>		
 	</body>
 </html>
