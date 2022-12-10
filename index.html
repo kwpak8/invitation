@@ -19,21 +19,26 @@
 					청담 더 채플<br>
 				</div>
 			</div>
+			<div id="map"></div>
 		</div>
 
-		<div id="map"></div>
+
 		<script>
+			var mapPos = new naver.maps.LatLng(37.5221839, 127.0390057);
 			var mapOptions = {
-			    center: new naver.maps.LatLng(37.495484, 127.029173),
+			    center: mapPos,
 			    zoom: 15
 			};
 
-			var marker = new naver.maps.Marker({
-			    position: new naver.maps.LatLng(37.495484, 127.029173),
-			    map: map
-			});
-
 			var map = new naver.maps.Map('map', mapOptions);
+
+			var markerOptions = {
+			    position: mapPos,
+			    map: map
+			};
+
+			var marker = new naver.maps.Marker(markerOptions);
+			
 		</script>
 	</body>
 </html>
