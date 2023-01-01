@@ -1,40 +1,60 @@
 body {
 	margin :0;
 	background : #000;
-	color:  #444;
+	color:  #178342;
 	text-align:center;
-	font-family: 'Noto Serif KR', serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+span {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+div {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#mainTextBox {
+	margin-top:30px;
+}
+
+#textMainTitle {
+	font-size: 24pt;
+	line-height: 40px;
+	margin-top:50px;
+}
+
+#textMain {
+	font-size: 20pt;
+	line-height: 35px;
+}
+
+#mainIllust {
+	margin-top:30px;
+	width:60%;
 }
 
 #container {
-	background : #c3d4dc;	
+	background : #fff;	
 	width:1024px;
 	margin:0 auto;
 	border:solid 1px;
 	padding-bottom:100px;
 }
 
-.picBox {
-	width: 100%;
-	border:solid 1px;
-}
+#GalleryBox {
 
-#pic1 {
-	background-image: url("images/main.jpg");
-	height:1000px;
-	margin:0px;
 }
 
 .textBox {
-	font-size: 24pt;
-	line-height: 40px;
 	background: #fff;
 	margin: auto;
 }
 
-#textTitle1 {
+#textMain1 {
 	font-size: 30pt;
 	margin-top:20px;
+	text-align: left;
 }
 
 #text1 {
@@ -45,27 +65,111 @@ body {
 	margin-top: 50px;
 }
 
-#text2 {
-	font-size: 18pt;
-	line-height:40px;
+#textGreeting {
+	font-size: 15pt;
+	line-height:30px;
 	margin-top:60px;
 	margin-bottom:60px;
 }
 
-#mapText {
-	font-size: 15pt;
-	line-height:30px;
-	margin-top:20px;
-	text-align: left;
+#mapTextBox {
+	text-align: center;
 	width:95%;
 	margin:auto;
+	margin-top:20px;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
+#titleMap {
+	font-size: 15pt;
+	line-height:30px;
+	font-weight: 700;
+}
+
+#textMap1 {
+	font-size: 15pt;
+	line-height: 20px;
+}
+
+#textMap2 {
+	font-size: 15pt;
+	line-height: 20px;
+}
+
+.mapGuide {
+	text-align:center;
+	margin-left:25px;
+	margin-top:20px;
+}
+
+.titleMapGuide {
+	font-weight: 900;
+	margin-top:20px;
+}
+
 #map {
-	width:95%;
+	width:974;
 	height:400px;
 	margin:auto;
+}
+
+.accountButton {
+	width:350px;
+	height:80px;
+	line-height:80px;
+	background-color:#198342;
+	margin:0 auto;
+	margin-top:10px;
+	color:#fff;
+	cursor:pointer;
+}
+
+#accountBox {
+	margin-top:50px;
+}
+
+.accountListBg {
+	display:none;
+	position:fixed;	
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	top:0;
+	left:0;
+	right:0;
+	z-index:1;
+	background-color:#00000050;
+}
+
+.accountList {
+	position:relative;
+	top:50%;
+	left:50%;
+	width:400px;
+	height:400px;
+	padding:20px;
+	background-color:#fff;
+	transform:translate(-50%, -50%);
+}
+
+.accountClose {
+	position:relative;
+	width:180px;
+	height:80px;
+	margin:0 auto;
+	margin-top:20px;
+	line-height: 80px;
+	background-color:#198342;
+	color:white;
+	cursor:pointer;
+}
+
+.accountTitle {
+	font-weight:700;
+}
+
+.accountName {
+	margin-bottom:5px;
 }
 
 @media screen and (min-width:512px) and (max-width: 1024px)
