@@ -32,8 +32,22 @@
 				축복해 주시면 감사하겠습니다.<br>
 			</div>
 
-			<div id="GalleryBox">
-				
+			<div id="galleryTitle">
+				갤러리
+			</div>
+			<div id="galleryBox">
+				<div class="galleryBtn" id="galleryBtnLeft" style="opacity: 30%" onClick="NaviPrev()">
+				&nbsp;&nbsp;◀
+				</div>
+				<div class="galleryBtn" id="galleryBtnRight" onClick="NaviNext()">
+				▶&nbsp;&nbsp;
+				</div>
+				<div id="photoList">
+					<div style="background-image:url(images/photo1.jpg);" class="galleryPhoto"></div>
+					<div style="background-image:url(images/photo1.jpg);" class="galleryPhoto"></div>
+					<div style="background-image:url(images/photo1.jpg);" class="galleryPhoto"></div>
+					<div style="background-image:url(images/photo1.jpg);" class="galleryPhoto"></div>
+				</div>
 			</div>
 
 			<div id="map"></div>
@@ -121,7 +135,7 @@
 			var mapPos = new naver.maps.LatLng(37.5221839, 127.0390057);
 			var mapOptions = {
 			    center: mapPos,
-			    zoom: 15
+			    zoom: 20
 			};
 
 			var map = new naver.maps.Map('map', mapOptions);
