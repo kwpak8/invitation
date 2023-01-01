@@ -3,8 +3,8 @@ body {
 	background : #178342;
 	color:  #178342;
 	text-align:center;
-	font-size:25pt;
-	line-height:45px;
+	font-size:30pt;
+	line-height:60px;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -21,18 +21,16 @@ div {
 }
 
 #textMainTitle {
-	font-size: 30pt;
-	line-height: 40px;
 	margin-top:50px;
 }
 
 #textMain {
-	font-size: 30pt;
-	line-height: 50px;
+	font-size:35pt;
+	font-weight: 900;
 }
 
 #mainIllust {
-	margin-top:30px;
+	margin-top:60px;
 	width:100%;
 }
 
@@ -46,8 +44,8 @@ div {
 
 #galleryTitle{
 	font-weight: 900;
-	font-size:30pt;
 	margin-bottom:20px;
+	margin-top:130px;
 }
 
 .galleryBtn{
@@ -105,24 +103,8 @@ div {
 	margin: auto;
 }
 
-#textMain1 {
-	font-size: 30pt;
-	margin-top:20px;
-	text-align: left;
-}
-
-#text1 {
-	font-size: 20pt;
-	line-height: 60px;
-	background: rgba(255,255,255,0.6);
-	width: 400px;
-	margin-top: 50px;
-}
-
 #textGreeting {
-	line-height:50px;
 	margin-top:80px;
-	margin-bottom:80px;
 }
 
 #mapTextBox {
@@ -133,13 +115,19 @@ div {
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-#titleMap {
+#mapTitle {
+	font-weight: 900;
+	margin-bottom:20px;
+	margin-top:130px;
+}
+
+#textMap1 {
 	line-height:40px;
 	font-weight: 700;
 }
 
-#textMap {
-	font-size: 20pt;
+#textMap2 {
+	font-size: 25pt;
 	line-height: 40px;
 }
 
@@ -157,25 +145,25 @@ div {
 #map {
 	width:974;
 	height:500px;
-	margin:auto;
-	margin-top:50px;
+	margin:0 auto;
 }
 
 .accountButton {
-	width:350px;
-	height:80px;
-	line-height:80px;
+	width:420px;
+	height:110px;
+	line-height:100px;
 	background-color:#198342;
 	margin:0 auto;
 	margin-top:10px;
-	font-size:25pt;
+	margin-bottom:30px;
+	font-size:30pt;
 	color:#fff;
 	cursor:pointer;
 }
 
 #accountBox {
 	margin-top:80px;
-	font-size:20pt;
+	font-size:25pt;
 }
 
 .accountListBg {
@@ -195,26 +183,32 @@ div {
 	position:relative;
 	top:50%;
 	left:50%;
-	width:540px;
-	height:580px;
+	width:650px;
+	height:620px;
 	padding:20px;
 	background-color:#fff;
 	transform:translate(-50%, -50%);
 	z-index:2;
-	font-size:20pt;
+	font-size:25pt;
+	line-height: 50px;
+}
+
+#accountBoxTitle{
+
 }
 
 .accountClose {
 	position:relative;
-	width:520px;
-	height:80px;
+	width:610px;
+	height:100px;
 	margin:0 auto;
-	margin-top:60px;
-	line-height: 80px;
+	margin-top:40px;
+	line-height: 100px;
 	background-color:#198342;
 	color:white;
 	cursor:pointer;
 	z-index:2;
+	font-size:30pt;
 }
 
 .accountTitle {

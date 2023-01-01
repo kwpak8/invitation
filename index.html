@@ -12,14 +12,14 @@
 	<body>
 		<div id = "container">
 			<div class="textBox" id="mainTextBox">
-				<span id="textMainTitle">
+				<div id="textMainTitle">
 				박경원 ♥ 임수연 <br>
-				</span>
-				<span id="textMain">
+				</div>
+				<div id="textMain">
 				결혼합니다<br>
+				</div>
 				2023월 2월 25일 오후 2시 반<br>
 				청담더채플 6층 채플홀<br>
-				</span>
 				<img src="images/illust.png" id="mainIllust" />
 			</div>
 			<div id="textGreeting">
@@ -50,10 +50,11 @@
 				</div>
 			</div>
 
+			<div id="mapTitle">찾아오시는 길</div>
 			<div id="map"></div>
 			<div id="mapTextBox">
-				<div id="titleMap">더채플앳청담 6층 채플홀</div>
-				<div id="textMap">서울 강남구 선릉로 757<br></div>
+				<div id="textMap1">더채플앳청담 6층 채플홀</div>
+				<div id="textMap2">서울 강남구 선릉로 757<br></div>
 			</div>
 			<div class="mapGuide">
 				<span class="titleMapGuide">
@@ -76,7 +77,9 @@
 
 
 			<div id="accountBox">
+				<div id="accountBoxTitle">
 				신랑 & 신부에게 마음 전하기
+				</div>
 				<div class="accountButton" onclick="AccountShow(1);">
 					신랑측 계좌번호
 				</div>
@@ -135,7 +138,7 @@
 			var mapPos = new naver.maps.LatLng(37.5221839, 127.0390057);
 			var mapOptions = {
 			    center: mapPos,
-			    zoom: 20
+			    zoom: 16
 			};
 
 			var map = new naver.maps.Map('map', mapOptions);
