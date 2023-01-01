@@ -183,14 +183,13 @@ div {
 	position:relative;
 	top:50%;
 	left:50%;
-	width:650px;
-	height:620px;
+	width:780px;
+	height:800px;
 	padding:20px;
+	padding-top:30px;
 	background-color:#fff;
 	transform:translate(-50%, -50%);
 	z-index:2;
-	font-size:25pt;
-	line-height: 50px;
 }
 
 #accountBoxTitle{
@@ -199,10 +198,10 @@ div {
 
 .accountClose {
 	position:relative;
-	width:610px;
+	width:740px;
 	height:100px;
 	margin:0 auto;
-	margin-top:40px;
+	margin-top:70px;
 	line-height: 100px;
 	background-color:#198342;
 	color:white;
@@ -212,7 +211,7 @@ div {
 }
 
 .accountTitle {
-	font-weight:700;
+	font-weight:900;
 }
 
 .accountName {
