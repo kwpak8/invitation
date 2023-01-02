@@ -1,7 +1,7 @@
 body {
 	margin :0;
-	background : #178342;
-	color:  #178342;
+	background : #083388;
+	color:  #083388;
 	text-align:center;
 	font-size:30pt;
 	line-height:60px;
@@ -20,17 +20,16 @@ div {
 	margin-top:30px;
 }
 
-#textMainTitle {
-	margin-top:50px;
+#mainTitle {
+	margin-top:100px;
 }
 
 #textMain {
-	font-size:35pt;
-	font-weight: 900;
+	margin-top:40px;
 }
 
 #mainIllust {
-	margin-top:60px;
+	margin-top:80px;
 	width:100%;
 }
 
@@ -82,7 +81,7 @@ div {
 	width:974px;
 	height:800px;
 	margin:0 auto;
-	background-color: #178342;
+	background-color: #083388;
 	overflow: hidden;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -148,7 +147,7 @@ div {
 	width:420px;
 	height:110px;
 	line-height:100px;
-	background-color:#198342;
+	background-color:#083388;
 	margin:0 auto;
 	margin-top:10px;
 	margin-bottom:30px;
@@ -199,7 +198,7 @@ div {
 	margin:0 auto;
 	margin-top:70px;
 	line-height: 100px;
-	background-color:#198342;
+	background-color:#083388;
 	color:white;
 	cursor:pointer;
 	z-index:2;
