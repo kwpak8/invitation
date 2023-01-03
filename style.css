@@ -12,20 +12,17 @@ body {
 	text-align:center;
 	font-size:30pt;
 	line-height:60px;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-family: 'maruburi';
+	font-family: 'maruburi', 'Noto Sans KR', sans-serif;
 	font-weight: 500;
 }
 
 span {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-family: 'maruburi';
+	font-family: 'maruburi','Noto Sans KR', sans-serif;
 	font-weight: 500;
 }
 
 div {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-family: 'maruburi';
+	font-family: 'maruburi','Noto Sans KR', sans-serif;
 	font-weight: 500;
 }
 
