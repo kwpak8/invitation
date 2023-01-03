@@ -1,3 +1,10 @@
+@font-face {
+	font-family : 'maruburi';
+	src : url(./fonts/MaruBuri-Bold.woff), weight:700;
+	src : url(./fonts/MaruBuri-SemiBold.woff), weight:500;
+	src : url(./fonts/MaruBuri-Regular.woff), weight:300;
+}
+
 body {
 	margin :0;
 	background : #083388;
@@ -6,14 +13,20 @@ body {
 	font-size:30pt;
 	line-height:60px;
 	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'maruburi';
+	font-weight: 500;
 }
 
 span {
 	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'maruburi';
+	font-weight: 500;
 }
 
 div {
 	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'maruburi';
+	font-weight: 500;
 }
 
 #mainTextBox {
@@ -44,7 +57,7 @@ div {
 #chapterTitle{
 	font-weight: 900;
 	margin-bottom:20px;
-	margin-top:130px;
+	margin-top:200px;
 	font-size:40pt;
 }
 
@@ -53,12 +66,12 @@ div {
 	width:287px;
 	height:800px;
 	line-height: 800px;
-	color:white;
+	color:#083388;
 }
 
 #galleryBtnLeft{
 	margin-left:0px;
-	text-align: left;
+	text-align: left;	
 	cursor:pointer;
 }
 
@@ -81,7 +94,7 @@ div {
 	width:974px;
 	height:800px;
 	margin:0 auto;
-	background-color: #083388;
+	background-color: #fff;
 	overflow: hidden;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -104,7 +117,8 @@ div {
 }
 
 #textGreeting {
-	margin-top:80px;
+	margin-top:200px;
+	line-height: 80px;
 }
 
 #mapTextBox {
@@ -124,12 +138,13 @@ div {
 #textMap2 {
 	font-size: 25pt;
 	line-height: 40px;
+	margin-top:20px;
 }
 
 .mapGuide {
 	text-align:center;
 	margin-left:25px;
-	margin-top:20px;
+	margin-top:50px;
 }
 
 .titleMapGuide {
