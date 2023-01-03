@@ -154,7 +154,7 @@ div {
 
 #map {
 	width:974;
-	height:500px;
+	height:800px;
 	margin:0 auto;
 }
 
@@ -226,6 +226,16 @@ div {
 
 .accountName {
 	margin-bottom:5px;
+}
+
+.mapInfo {
+	font-size:25pt;
+	line-height:50px;
+	padding:10px;
+}
+
+#mapInfoDetail {
+	font-size:20pt;
 }
 
 @media screen and (min-width:512px) and (max-width: 1024px)
