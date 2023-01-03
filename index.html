@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>경원♥수연 결혼식에 초대합니다</title>
+		<title>경원 ♥ 수연 결혼식에 초대합니다</title>
 		<link rel ="stylesheet" href="style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,17 +138,19 @@
 
 			var map = new naver.maps.Map('map', mapOptions);
 
-			var markerOptions = {
+			map.setOptions({ //지도 인터랙션 끄기
 	            draggable: false,
 	            pinchZoom: false,
 	            scrollWheel: false,
 	            keyboardShortcuts: false,
 	            disableDoubleTapZoom: true,
 	            disableDoubleClickZoom: true,
-	            disableTwoFingerTapZoom: true,
+	            disableTwoFingerTapZoom: true
+	        });
+
+			var markerOptions = {
 			    position: mapPos,
 			    map: map,
-			    style: naver.maps.ZoomControlStyle.LARGE
 			};
 
 			var contentString = [
