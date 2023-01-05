@@ -1,6 +1,36 @@
 var num = 0;
 var naviPage = 1;
 
+
+function ScreenSize(){
+	var sh = screen.height;
+	var galleryBox = document.getElementById('galleryBox');
+	var photoScroll = document.getElementById('photoScroll');
+	var photoList = document.getElementById('photoList');
+
+	galleryBox.style.height = sh * 0.8;
+	photoScroll.style.height = sh * 0.8;
+
+	var width = galleryBox.clientWidth;
+	
+	photoScroll.addEventListener("mouseup", function (){
+		var current = photoScroll.scrollLeft;
+		var diff = current%width;
+		ScrollSnap(diff, width);
+		}
+	);
+}
+
+function ScrollSnap(diff, width){
+	var photoScroll = document.getElementById('photoScroll');
+	console.log(diff + "/" + width/2)
+	if(diff > width/2){
+		photoScroll.scrollLeft = photoScroll.scrollLeft + (width - diff);
+	}else{
+		photoScroll.scrollLeft = photoScroll.scrollLeft - diff;	
+	}
+}
+
 function Setting(){
 	var account1 = document.getElementById('account1');
 	var account2 = document.getElementById('account2');

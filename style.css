@@ -78,6 +78,10 @@ div {
 	cursor:pointer;
 }
 
+#mainPhoto{
+
+}
+
 .galleryPhoto{
 	width:974px;
 	height:100%;
@@ -104,12 +108,21 @@ div {
 	height:800px;
 }
 
+#photoScroll::-webkit-scrollbar {
+	width:10px;
+}
+#photoScroll::-webkit-scrollbar-thumb {
+	background-color: #083388;
+}
+#photoScroll::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
 #photoList {
 	width:400%;
 	height:100%;
 	float:left;
-	transition-duration:0.8s;
-	-webkit-transition-duration:0.8s;
+	scroll-snap-align: center;
 }
 
 .textBox {
