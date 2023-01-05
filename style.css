@@ -99,13 +99,17 @@ div {
 	user-select:none
 }
 
+#photoScroll {
+	overflow-x: scroll;
+	height:800px;
+}
+
 #photoList {
 	width:400%;
 	height:100%;
 	float:left;
 	transition-duration:0.8s;
 	-webkit-transition-duration:0.8s;
-
 }
 
 .textBox {
