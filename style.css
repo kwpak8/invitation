@@ -89,6 +89,7 @@ div {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	scroll-snap-align: start;
 }
 
 #galleryBox {
@@ -105,6 +106,7 @@ div {
 
 #photoScroll {
 	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
 	height:800px;
 }
 

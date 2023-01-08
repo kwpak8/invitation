@@ -1,5 +1,6 @@
 var num = 0;
 var naviPage = 1;
+var timer = null;
 
 
 function ScreenSize(){
@@ -13,15 +14,29 @@ function ScreenSize(){
 
 	var width = galleryBox.clientWidth;
 	
-	photoScroll.addEventListener("mouseup", function (){
-		var current = photoScroll.scrollLeft;
-		var diff = current%width;
-		ScrollSnap(diff, width);
-		}
-	);
+	// photoScroll.addEventListener("scroll", function (e){
+	// 	console.log(e);
+	// 	if(timer !== null){
+	// 		clearTimeout(timer);
+	// 	}
+	// 	timer = setTimeout(function(){
+	// 		var current = photoScroll.scrollLeft;
+	// 		var diff = current%width;
+	// 		ScrollSnap(diff, width);
+	// 	}, 500);
+	// }, false);
 }
 
 function ScrollSnap(diff, width){
+	var sh = screen.height;
+	var galleryBox = document.getElementById('galleryBox');
+	var photoScroll = document.getElementById('photoScroll');
+	var photoList = document.getElementById('photoList');
+
+	var width = galleryBox.clientWidth;
+	var current = photoScroll.scrollLeft;
+	var diff = current%width;
+
 	var photoScroll = document.getElementById('photoScroll');
 	console.log(diff + "/" + width/2)
 	if(diff > width/2){
