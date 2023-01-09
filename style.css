@@ -92,7 +92,7 @@ div {
 
 #photoScroll {
 	overflow-x: scroll;
-/*	scroll-snap-type: x mandatory;*/
+	scroll-snap-type: x mandatory;
 	height:800px;
 }
 

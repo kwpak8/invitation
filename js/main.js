@@ -36,6 +36,7 @@ function PhotoNavi(photoNum){
 		photoMoveNow = true;
 		var galleryBox = document.getElementById('galleryBox');	
 		var photoScroll = document.getElementById('photoScroll');
+		photoScroll.style.scrollSnapType = "none";
 		var width = galleryBox.clientWidth;
 
 		photoTargetX = width * (photoNum-1);
@@ -60,6 +61,7 @@ function PhotoMove(photoTargetX){
 	}else{
 		photoScroll.scrollLeft = photoTargetX;
 		photoMoveNow = false;
+		photoScroll.style.scrollSnapType = "x mandatory";
 		return;
 	}
 	setTimeout(function(){
