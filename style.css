@@ -78,20 +78,6 @@ div {
 	cursor:pointer;
 }
 
-#mainPhoto{
-
-}
-
-.galleryPhoto{
-	width:974px;
-	height:100%;
-	float:left;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	scroll-snap-align: start;
-}
-
 #galleryBox {
 	width:974px;
 	height:800px;
@@ -106,7 +92,7 @@ div {
 
 #photoScroll {
 	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
+/*	scroll-snap-type: x mandatory;*/
 	height:800px;
 }
 
@@ -124,8 +110,65 @@ div {
 	width:400%;
 	height:100%;
 	float:left;
-	scroll-snap-align: center;
 }
+
+.galleryPhoto{
+	width:974px;
+	height:100%;
+	float:left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	scroll-snap-align: start;
+}
+
+#photoBtnList{
+	width:100%;
+	height:100px;
+}
+
+.photoBtn{
+	width:100px;
+	height:100px;	
+	float:left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+
+#photo1 {
+	background-image:url(images/photo1.jpg);
+}
+
+#photo2 {
+	background-image:url(images/photo2.jpg);
+}
+
+#photo3 {
+	background-image:url(images/photo3.jpg);
+}
+
+#photo4 {
+	background-image:url(images/photo4.jpg);
+}
+
+#photoBtn1 {
+	background-image:url(images/photo1.jpg);
+}
+
+#photoBtn2 {
+	background-image:url(images/photo2.jpg);
+}
+
+#photobtn3 {
+	background-image:url(images/photo3.jpg);
+}
+
+#photoBtn4 {
+	background-image:url(images/photo4.jpg);
+}
+
+
 
 .textBox {
 	background: #fff;
@@ -209,11 +252,12 @@ div {
 	position:relative;
 	top:50%;
 	left:50%;
-	width:780px;
-	height:800px;
+	width:800px;
+	height:950px;
 	padding:20px;
 	padding-top:30px;
 	background-color:#fff;
+	line-height: 70px;
 	transform:translate(-50%, -50%);
 	z-index:2;
 }
@@ -241,7 +285,12 @@ div {
 }
 
 .accountName {
+	font-size:25pt;
 	margin-bottom:5px;
+}
+
+.accountNum {
+	font-size:30pt;
 }
 
 .mapInfo {

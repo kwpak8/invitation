@@ -1,6 +1,10 @@
 var num = 0;
 var naviPage = 1;
 var timer = null;
+var photoNum = 0;
+var photoCurrentX = 0;
+var photoTargetX = 0;
+var photoMoveNow = false;
 
 
 function ScreenSize(){
@@ -25,6 +29,42 @@ function ScreenSize(){
 	// 		ScrollSnap(diff, width);
 	// 	}, 500);
 	// }, false);
+}
+
+function PhotoNavi(photoNum){
+	if(!photoMoveNow){
+		photoMoveNow = true;
+		var galleryBox = document.getElementById('galleryBox');	
+		var photoScroll = document.getElementById('photoScroll');
+		var width = galleryBox.clientWidth;
+
+		photoTargetX = width * (photoNum-1);
+		PhotoMove(photoTargetX);
+	}	
+}
+
+function PhotoMove(photoTargetX){
+	var photoScroll = document.getElementById('photoScroll');
+	photoCurrentX = photoScroll.scrollLeft;
+	var diff = Math.abs(photoCurrentX - photoTargetX);
+	//console.log((photoCurrentX - photoTargetX)/10);
+	if(diff >= 10){
+		photoScroll.scrollLeft = photoCurrentX + ((photoTargetX - photoCurrentX)/10);
+		console.log(diff);
+	}else if(diff >= 5 && photoCurrentX > photoTargetX){
+		photoScroll.scrollLeft -= 1;
+		console.log(diff);
+	}else if(diff >= 5 && photoCurrentX < photoTargetX){
+		photoScroll.scrollLeft += 1;
+		console.log(diff);
+	}else{
+		photoScroll.scrollLeft = photoTargetX;
+		photoMoveNow = false;
+		return;
+	}
+	setTimeout(function(){
+		PhotoMove(photoTargetX);
+	},5);
 }
 
 function ScrollSnap(diff, width){
