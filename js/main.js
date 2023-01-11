@@ -8,15 +8,15 @@ var photoMoveNow = false;
 
 
 function ScreenSize(){
-	var sh = screen.height;
-	var galleryBox = document.getElementById('galleryBox');
-	var photoScroll = document.getElementById('photoScroll');
-	var photoList = document.getElementById('photoList');
+	// var sh = screen.height;
+	// var galleryBox = document.getElementById('galleryBox');
+	// var photoScroll = document.getElementById('photoScroll');
+	// var photoList = document.getElementById('photoList');
 
-	galleryBox.style.height = sh * 0.8;
-	photoScroll.style.height = sh * 0.8;
+	// galleryBox.style.height = sh * 0.8;
+	// photoScroll.style.height = sh * 0.8;
 
-	var width = galleryBox.clientWidth;
+	// var width = galleryBox.clientWidth;
 	
 	// photoScroll.addEventListener("scroll", function (e){
 	// 	console.log(e);
