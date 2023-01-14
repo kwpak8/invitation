@@ -7,7 +7,7 @@ var photoTargetX = 0;
 var photoMoveNow = false;
 
 
-function ScreenSize(){
+// function ScreenSize(){
 	// var sh = screen.height;
 	// var galleryBox = document.getElementById('galleryBox');
 	// var photoScroll = document.getElementById('photoScroll');
@@ -29,7 +29,7 @@ function ScreenSize(){
 	// 		ScrollSnap(diff, width);
 	// 	}, 500);
 	// }, false);
-}
+// }
 
 function PhotoNavi(photoNum){
 	if(!photoMoveNow){
@@ -91,6 +91,7 @@ function ScrollSnap(diff, width){
 function Setting(){
 	var account1 = document.getElementById('account1');
 	var account2 = document.getElementById('account2');
+	var busanPopup = document.getElementById('busanPopup');
 }
 
 function AccountShow(num){
@@ -112,11 +113,18 @@ function AccountShow(num){
 	}
 }
 
+function BusanShow(){
+	Setting();
+	CloseAll();
+	busanPopup.style.display = "block";
+}
+
 function CloseAll(){
 	Setting();
 
 	account1.style.display = "none";
-	account2.style.display = "none";	
+	account2.style.display = "none";
+	busanPopup.style.display = "none";
 }
 
 function NaviNext(){
