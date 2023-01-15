@@ -31,6 +31,13 @@ var photoMoveNow = false;
 	// }, false);
 // }
 
+function PhotoPopupOpen(photoNum){
+	var photoPopup = document.getElementById('photoPopup');
+	var bigPhoto = document.getElementById('bigPhoto');
+	photoPopup.style.display = "block";
+	bigPhoto.style.backgroundImage = "url('images/photo"+photoNum+".jpg')";
+}
+
 function PhotoNavi(photoNum){
 	if(!photoMoveNow){
 		photoMoveNow = true;
@@ -92,6 +99,7 @@ function Setting(){
 	var account1 = document.getElementById('account1');
 	var account2 = document.getElementById('account2');
 	var busanPopup = document.getElementById('busanPopup');
+	var photoPopup = document.getElementById('photoPopup');
 }
 
 function AccountShow(num){
@@ -125,6 +133,7 @@ function CloseAll(){
 	account1.style.display = "none";
 	account2.style.display = "none";
 	busanPopup.style.display = "none";
+	photoPopup.style.display = "none";
 }
 
 function NaviNext(){

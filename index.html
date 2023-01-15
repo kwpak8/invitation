@@ -40,29 +40,27 @@
 			<div id="galleryBox">
 				<div id="photoScroll">
 					<div id="photoList">
-						<div class="galleryPhoto" style="background-image:url(images/photo1.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo2.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo3.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo4.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo1.jpg);" onclick="PhotoPopupOpen(1);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo2.jpg);" onclick="PhotoPopupOpen(2);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo3.jpg);" onclick="PhotoPopupOpen(3);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo4.jpg);" onclick="PhotoPopupOpen(4);"></div>
 
-						<div class="galleryPhoto" style="background-image:url(images/photo5.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo6.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo7.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo8.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo5.jpg);" onclick="PhotoPopupOpen(5);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo6.jpg);" onclick="PhotoPopupOpen(6);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo7.jpg);" onclick="PhotoPopupOpen(7);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo8.jpg);" onclick="PhotoPopupOpen(8);"></div>
 
-						<div class="galleryPhoto" style="background-image:url(images/photo9.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo10.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo11.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo12.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo9.jpg);" onclick="PhotoPopupOpen(9);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo10.jpg);" onclick="PhotoPopupOpen(10);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo11.jpg);" onclick="PhotoPopupOpen(11);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo12.jpg);" onclick="PhotoPopupOpen(12);"></div>
 
-						<div class="galleryPhoto" style="background-image:url(images/photo13.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo14.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo15.jpg);"></div>
-						<div class="galleryPhoto" style="background-image:url(images/photo16.jpg);"></div>						
+						<div class="galleryPhoto" style="background-image:url(images/photo13.jpg);" onclick="PhotoPopupOpen(13);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo14.jpg);" onclick="PhotoPopupOpen(14);"></div>					
 					</div>
 				</div>
 			</div>
-			<!-- 12장 + 4장 -->
+			<!-- 10장 + 4장 -->
 			<div id="photoBtnList">
 				<div style="background-image:url(images/photo1.jpg);" class="photoBtn" onclick="PhotoNavi(1)">
 				</div>
@@ -94,11 +92,7 @@
 				<div style="background-image:url(images/photo13.jpg);" class="photoBtn" onclick="PhotoNavi(13)">
 				</div>
 				<div style="background-image:url(images/photo14.jpg);" class="photoBtn" onclick="PhotoNavi(14)">
-				</div>
-				<div style="background-image:url(images/photo15.jpg);" class="photoBtn" onclick="PhotoNavi(15)">
-				</div>
-				<div style="background-image:url(images/photo16.jpg);" class="photoBtn" onclick="PhotoNavi(16)">
-				</div>				
+				</div>		
 			</div>
 
 			<div class="chapterTitle">찾아오시는 길</div>
@@ -228,6 +222,12 @@
 			</div>
 		</div>
 
+		<div id="photoPopup" onClick="CloseAll()">
+			<div id="bigPhoto">
+				<div id="closeBtn" onclick="CloseAll()"></div>
+			</div>
+		</div>
+
 		
 
 
@@ -247,7 +247,16 @@
 	            keyboardShortcuts: false,
 	            disableDoubleTapZoom: true,
 	            disableDoubleClickZoom: true,
-	            disableTwoFingerTapZoom: true
+	            disableTwoFingerTapZoom: true,
+			    scaleControl: false,
+		        logoControl: false,
+		        mapDataControl: false,	            
+		        zoomControl: true,
+		        zoomControlOptions: {
+		            style: naver.maps.ZoomControlStyle.SMALL,
+		            position: naver.maps.Position.TOP_RIGHT
+		        },
+		        minZoom: 6	            
 	        });
 
 			var markerOptions = {
@@ -257,8 +266,8 @@
 
 			var contentString = [
 		        '<div class="mapInfo">',
-		        '   더채플앳청담<br/>',
-		        '   <span id="mapInfoDetail">서울 강남구 선릉로 757</span><br/>',
+		        '   <div id="mapInfoTitle">더채플앳청담</div>',
+		        '   <div id="mapInfoDetail">서울 강남구 선릉로 757</div>',
 		        '</div>'
 			].join('');
 
@@ -266,7 +275,7 @@
 
 			var infowindow = new naver.maps.InfoWindow({
 			    content: contentString,
-			    borderWidth: 2
+			    // borderWidth: 2
 			});
 
 			naver.maps.Event.addListener(marker, "click", function(e) {
