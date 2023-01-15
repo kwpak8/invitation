@@ -7,10 +7,10 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700;900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700;900&family=Noto+Serif+KR:wght@300;500;700;900&display=swap" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2qwulw006s"></script>
+		<!-- <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2qwulw006s"></script> -->
 		<script src="js/main.js"></script>
 	</head>
-	<body>
+	<body onload="ScrollSetting()">
 		<div id = "container">
 			<div class="textBox" id="mainTextBox">
 				<img src="images/title.png" id="mainTitle" />
@@ -60,6 +60,23 @@
 						<div class="galleryPhoto" style="background-image:url(images/photo15.jpg);" onclick="PhotoPopupOpen(15);"></div>					
 					</div>
 				</div>
+				<div id="photoNaviBtnList">
+					<div class="photoNaviBtn" onclick="PhotoNavi(1)" style="color:#c27e41;">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(2)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(3)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(4)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(5)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(6)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(7)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(8)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(9)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(10)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(11)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(12)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(13)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(14)">●</div>
+					<div class="photoNaviBtn" onclick="PhotoNavi(15)">●</div>
+				</div>
 			</div>
 			<!-- 10장 + 4장 -->
 			<div id="photoBtnList">
@@ -99,7 +116,17 @@
 			</div>
 
 			<div class="chapterTitle">찾아오시는 길</div>
-			<div id="map"></div>
+			<!-- <div id="map"></div> -->
+			<div id="mapContainer">
+				<div id="simpleMap">
+					<img src="images/map.jpg" style="margin-left:50px"/>
+				</div>
+				<div id="mapLinkList">
+					<div class="mapBtn" style="background-color: #3fb044;"><a href="https://naver.me/GxORdBJ9" target="_blank">네이버지도</a></div>
+					<div class="mapBtn" style="background-color: #ecbf28;"><a href="https://place.map.kakao.com/23182563" target="_blank">카카오맵</a></div>
+					<div class="mapBtn" style="background-color: #7a4c9b;"><a href="https://surl.tmap.co.kr/fc03f845" target="_blank">티맵</a></div>
+				</div>
+			</div>
 			<div class="mapTextBox">
 				<div class="textMap1">더채플앳청담 6층 채플홀</div>
 				<div class="textMap2">서울 강남구 선릉로 757<br></div>
@@ -147,26 +174,36 @@
 			</div>
 		</div>
 
-		<div class="accountListBg" id="account1" onClick="CloseAll()">
+		<div class="accountListBg" id="account1">
 			<div class="accountList">
 				<div class="accountTitle">신랑계좌</div>
 				<div class="accountName">우리은행 (예금주:박경원)
 					<br>
-					<span class="accountNum">1002-933-869549</span>
-				</div>				
-				<a href="http://kko.to/ZFuZub8MLP"><img src="images/btn_send_regular.png"/></a><p>
+					<div class="accountBox">
+						<div class="accountNum">1002-933-869549</div>
+						<div class="copyNumBtn" onclick="CopyNum(1)">복사하기</div>
+					</div>
+				</div>
+				<a href="http://kko.to/ZFuZub8MLP"><img src="images/btn_send_regular.png"/></a>
+				<p>
 				<div class="accountTitle">신랑측 아버지 계좌</div>
 				<div class="accountName">농협은행 (예금주:박명근)
 					<br>
-					<span class="accountNum">356-0813-1017-83</span>
-				</div>				
+					<div class="accountBox">
+						<div class="accountNum">356-0813-1017-83</div>
+						<div class="copyNumBtn" onclick="CopyNum(2)">복사하기</div>
+					</div>
+				</div>
 				<p>
 				<div class="accountTitle">신랑측 어머니 계좌</div>
 				<div class="accountName">부산은행 (예금주:신경순)
 					<br>
-					<span class="accountNum">039-12-012714-7</span>
+					<div class="accountBox">
+						<div class="accountNum">039-12-012714-7</div>
+						<div class="copyNumBtn" onclick="CopyNum(3)">복사하기</div>
+					</div>
 				</div>				
-				<p>
+				<p>				
 				<div class="accountClose" onClick="CloseAll()">닫기</div>
 			</div>
 		</div>
@@ -176,19 +213,28 @@
 				<div class="accountTitle">신부계좌</div>
 				<div class="accountName">신한은행 (예금주:임수연)
 					<br>
-					<span class="accountNum">110-473-612872</span>
+					<div class="accountBox">
+						<div class="accountNum">110-473-612872</div>
+						<div class="copyNumBtn" onclick="CopyNum(4)">복사하기</div>
+					</div>
 				</div>				
 				<a href="http://kko.to/B49tph9x-h"><img src="images/btn_send_regular.png"/></a><p>
 				<div class="accountTitle">신부측 아버지 계좌</div>
 				<div class="accountName">농협은행 (예금주:임철용)
 					<br>
-					<span class="accountNum">352-1463-0292-13</span>
-				</div>				
+					<div class="accountBox">
+						<div class="accountNum">352-1463-0292-13</div>
+						<div class="copyNumBtn" onclick="CopyNum(5)">복사하기</div>
+					</div>
+				</div>
 				<p>
 				<div class="accountTitle">신부측 어머니 계좌</div>
 				<div class="accountName">농협은행 (예금주:조선이)
 					<br>
-					<span class="accountNum">207102-52-051482</span>
+					<div class="accountBox">
+						<div class="accountNum">207102-52-051482</div>
+						<div class="copyNumBtn" onclick="CopyNum(6)">복사하기</div>
+					</div>
 				</div>				
 				<p>
 				<div class="accountClose" onClick="CloseAll()">닫기</div>
@@ -234,7 +280,7 @@
 		
 
 
-		<script>
+		<!-- <script>
 			var mapPos = new naver.maps.LatLng(37.5221839, 127.0390057);
 			var mapOptions = {
 			    center: mapPos,
@@ -291,6 +337,6 @@
 
 			infowindow.open(map, marker);
 			
-		</script>
+		</script> -->
 	</body>
 </html>

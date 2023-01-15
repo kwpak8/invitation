@@ -5,6 +5,31 @@ var photoNum = 0;
 var photoCurrentX = 0;
 var photoTargetX = 0;
 var photoMoveNow = false;
+var scrollTimer;
+
+
+function ScrollSetting(){
+	var photoScroll = document.getElementById('photoScroll');
+	photoScroll.addEventListener("scroll", () => {
+	if(!scrollTimer){
+		scrollTimer = setTimeout(() => {
+			scrollTimer = null;			
+			NaviSetting(photoScroll.scrollLeft);
+		},500);	
+	}
+})
+}
+
+function NaviSetting(scrollLeft){
+	var width = galleryBox.clientWidth;
+	//console.log(scrollLeft%width);
+	if(scrollLeft%width == 0){
+		photoNum = scrollLeft/width + 1;
+		//console.log(photoNum);
+		PhotoDotSetting(photoNum);
+	}
+}
+
 
 
 // function ScreenSize(){
@@ -40,6 +65,8 @@ function PhotoPopupOpen(photoNum){
 
 function PhotoNavi(photoNum){
 	if(!photoMoveNow){
+		PhotoDotSetting(photoNum);
+
 		photoMoveNow = true;
 		var galleryBox = document.getElementById('galleryBox');	
 		var photoScroll = document.getElementById('photoScroll');
@@ -51,6 +78,14 @@ function PhotoNavi(photoNum){
 	}	
 }
 
+function PhotoDotSetting(photoNum){
+	var naviBtn = document.getElementsByClassName('photoNaviBtn');	
+	for(var i = 0; i < naviBtn.length; i++){
+		naviBtn[i].style.color = "#083388";
+	}
+	naviBtn[photoNum-1].style.color = "#c27e41";
+}
+
 function PhotoMove(photoTargetX){
 	var photoScroll = document.getElementById('photoScroll');
 	photoCurrentX = photoScroll.scrollLeft;
@@ -58,13 +93,13 @@ function PhotoMove(photoTargetX){
 	//console.log((photoCurrentX - photoTargetX)/10);
 	if(diff >= 10){
 		photoScroll.scrollLeft = photoCurrentX + ((photoTargetX - photoCurrentX)/10);
-		console.log(diff);
+		// console.log(diff);
 	}else if(diff >= 5 && photoCurrentX > photoTargetX){
 		photoScroll.scrollLeft -= 1;
-		console.log(diff);
+		// console.log(diff);
 	}else if(diff >= 5 && photoCurrentX < photoTargetX){
 		photoScroll.scrollLeft += 1;
-		console.log(diff);
+		// console.log(diff);
 	}else{
 		photoScroll.scrollLeft = photoTargetX;
 		photoMoveNow = false;
@@ -74,6 +109,36 @@ function PhotoMove(photoTargetX){
 	setTimeout(function(){
 		PhotoMove(photoTargetX);
 	},5);
+}
+
+function CopyNum(numIndex) {
+	var num = 0;
+    switch(numIndex) {
+    case 1:
+    	num = "1002933869549";
+    	break;
+    case 2:
+    	num = "3560813101783";
+    	break;
+    case 3:
+    	num = "039120127147";
+    	break;
+    case 4:
+    	num = "110473612872";
+    	break;
+    case 5:
+    	num = "3521463029213";
+    	break;
+    case 6:
+    	num = "20710252051482";
+    	break;
+    default :
+    	num = "1002933869549";
+    	break;
+    }
+    navigator.clipboard.writeText(num);
+    var numText = num + ' 계좌번호가 복사되었습니다.'
+    window.alert(numText);
 }
 
 function ScrollSnap(diff, width){
@@ -87,7 +152,7 @@ function ScrollSnap(diff, width){
 	var diff = current%width;
 
 	var photoScroll = document.getElementById('photoScroll');
-	console.log(diff + "/" + width/2)
+	//console.log(diff + "/" + width/2)
 	if(diff > width/2){
 		photoScroll.scrollLeft = photoScroll.scrollLeft + (width - diff);
 	}else{

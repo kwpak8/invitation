@@ -15,6 +15,10 @@ body {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 500;
 	height:0px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none	
 }
 
 span {
@@ -81,7 +85,7 @@ div {
 
 #galleryBox {
 	width:100%;
-	height:1000px;
+	height:1050px;
 	margin:0 auto;
 	background-color: #fff;
 	overflow: hidden;
@@ -91,15 +95,32 @@ div {
 	user-select:none
 }
 
+#photoNaviBtnList {
+	width:525px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20pt;
+	margin:0 auto;
+}
+
+.photoNaviBtn {
+	float:left;
+	width:35px;
+	height:50px;
+}
+
 #photoScroll {
-	width:1024px;	
+	width:1024px;
+	height:1000px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 /*	height:800px;*/
 }
 
 #photoScroll::-webkit-scrollbar {
-	width:10px;
+	width:0px;
+	height:0px;
 }
 #photoScroll::-webkit-scrollbar-thumb {
 	background-color: #083388;
@@ -188,6 +209,40 @@ div {
 	width:974;
 	height:800px;
 	margin:0 auto;
+}
+
+#simpleMap{
+	width:50%;
+	height:580px;
+	float:left;
+}
+
+#mapLinkList{
+	width:50%;
+	height:440px;
+	padding-top:80px;
+	float:left;
+}
+
+#mapContainer{
+	height:580px;
+	margin:0 auto;
+	margin-top:50px;
+}
+
+.mapBtn{
+	width:250px;
+	height:100px;
+	line-height: 100px;
+	background-color:#083388;
+	color:#fff;
+	margin:0 auto;
+	margin-bottom: 20px;
+}
+
+a{
+	text-decoration: none;
+	color:#fff;
 }
 
 .accountBtn {
@@ -350,7 +405,7 @@ div {
 	width:740px;
 	height:140px;
 	margin:0 auto;
-	margin-top:70px;
+	margin-top:90px;
 	line-height: 140px;
 	background-color:#083388;
 	color:white;
@@ -368,8 +423,28 @@ div {
 	margin-bottom:5px;
 }
 
+.accountBox {
+	margin:0 auto;
+	width:560px;
+	height:60px;
+}
+
 .accountNum {
 	font-size:30pt;
+	height:60px;
+	line-height:60px;
+	width:400px;
+	float:left;
+}
+
+.copyNumBtn {
+	float:left;
+	color:#083388;
+	width:152px;
+	height:52px;
+	line-height:52px;
+	border:solid 4px #083388;
+	font-size:20pt;
 }
 
 .mapInfo {
