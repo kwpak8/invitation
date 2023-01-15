@@ -92,6 +92,7 @@ div {
 }
 
 #photoScroll {
+	width:1024px;	
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 /*	height:800px;*/
@@ -113,7 +114,7 @@ div {
 }
 
 .galleryPhoto{
-	width:974px;
+	width:1024px;
 	height:100%;
 	float:left;
 	background-size: contain;
