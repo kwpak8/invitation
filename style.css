@@ -108,8 +108,7 @@ div {
 }
 
 #photoList {
-	width:1200%;
-	height:100%;
+	width:1400%;
 	float:left;
 }
 
@@ -342,6 +341,7 @@ div {
 	line-height:60px;
 	padding:10px;
 	font-weight: 700;
+	width:400px;
 }
 
 #mapInfoDetail {
