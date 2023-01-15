@@ -109,7 +109,7 @@ div {
 }
 
 #photoList {
-	width:1400%;
+	width:1500%;
 	float:left;
 }
 
@@ -131,8 +131,8 @@ div {
 }
 
 .photoBtn{
-	width:25%;
-	height:200px;
+	width:20%;
+	height:150px;
 	float:left;
 	background-size: cover;
 	background-repeat: no-repeat;
