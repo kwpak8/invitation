@@ -21,13 +21,14 @@
 				
 				<img src="images/illust.png" id="mainIllust" />
 			</div>
-			
+
 			<div id="textGreeting">
 				가족 같은 회사에서 만난 인연이<br>
 				진짜 가족이 되었습니다.<br>
 				서로 사랑하고 존중하며<br>
 				평생의 동료가 되겠습니다.<br>
-				<br>
+				<img src="images/flower.png" 
+				style="margin-top:60px; margin-bottom:60px"/><br>
 				박명근, 신경숙의 차남 <span style="font-weight:900">박경원</span><br>
 				임철용, 조선이의 차녀 <span style="font-weight:900">임수연</span><br>
 
@@ -39,22 +40,65 @@
 			<div id="galleryBox">
 				<div id="photoScroll">
 					<div id="photoList">
-						<div id="photo1" class="galleryPhoto"></div>
-						<div id="photo2" class="galleryPhoto"></div>
-						<div id="photo3" class="galleryPhoto"></div>
-						<div id="photo4" class="galleryPhoto"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo1.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo2.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo3.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo4.jpg);"></div>
+
+						<div class="galleryPhoto" style="background-image:url(images/photo5.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo6.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo7.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo8.jpg);"></div>
+
+						<div class="galleryPhoto" style="background-image:url(images/photo9.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo10.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo11.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo12.jpg);"></div>
+
+						<div class="galleryPhoto" style="background-image:url(images/photo13.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo14.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo15.jpg);"></div>
+						<div class="galleryPhoto" style="background-image:url(images/photo16.jpg);"></div>						
 					</div>
 				</div>
 			</div>
+			<!-- 12장 + 4장 -->
 			<div id="photoBtnList">
-				<div id="photoBtn1" class="photoBtn" onclick="PhotoNavi(1)">
+				<div style="background-image:url(images/photo1.jpg);" class="photoBtn" onclick="PhotoNavi(1)">
 				</div>
-				<div id="photoBtn2" class="photoBtn" onclick="PhotoNavi(2)">
+				<div style="background-image:url(images/photo2.jpg);" class="photoBtn" onclick="PhotoNavi(2)">
 				</div>
-				<div id="photoBtn3" class="photoBtn" onclick="PhotoNavi(3)">
+				<div style="background-image:url(images/photo3.jpg);" class="photoBtn" onclick="PhotoNavi(3)">
 				</div>
-				<div id="photoBtn4" class="photoBtn" onclick="PhotoNavi(4)">
+				<div style="background-image:url(images/photo4.jpg);" class="photoBtn" onclick="PhotoNavi(4)">
 				</div>
+
+				<div style="background-image:url(images/photo5.jpg);" class="photoBtn" onclick="PhotoNavi(5)">
+				</div>
+				<div style="background-image:url(images/photo6.jpg);" class="photoBtn" onclick="PhotoNavi(6)">
+				</div>
+				<div style="background-image:url(images/photo7.jpg);" class="photoBtn" onclick="PhotoNavi(7)">
+				</div>
+				<div style="background-image:url(images/photo8.jpg);" class="photoBtn" onclick="PhotoNavi(8)">
+				</div>
+
+				<div style="background-image:url(images/photo9.jpg);" class="photoBtn" onclick="PhotoNavi(9)">
+				</div>
+				<div style="background-image:url(images/photo10.jpg);" class="photoBtn" onclick="PhotoNavi(10)">
+				</div>
+				<div style="background-image:url(images/photo11.jpg);" class="photoBtn" onclick="PhotoNavi(11)">
+				</div>
+				<div style="background-image:url(images/photo12.jpg);" class="photoBtn" onclick="PhotoNavi(12)">
+				</div>
+
+				<div style="background-image:url(images/photo13.jpg);" class="photoBtn" onclick="PhotoNavi(13)">
+				</div>
+				<div style="background-image:url(images/photo14.jpg);" class="photoBtn" onclick="PhotoNavi(14)">
+				</div>
+				<div style="background-image:url(images/photo15.jpg);" class="photoBtn" onclick="PhotoNavi(15)">
+				</div>
+				<div style="background-image:url(images/photo16.jpg);" class="photoBtn" onclick="PhotoNavi(16)">
+				</div>				
 			</div>
 
 			<div class="chapterTitle">찾아오시는 길</div>
@@ -102,8 +146,7 @@
 			<div id="bye">
 				감사합니다<br>
 				행복하게 잘 살겠습니다<br>
-				<br>
-				경원 · 수연 올림<br>
+				<image src="images/ending.png" style="margin-top:40px;">
 			</div>
 		</div>
 
@@ -157,27 +200,26 @@
 
 		<div id="busanPopup" onClick="CloseAll()">
 			<div id="busanList">
-				<div id="busanTitle">부산 단체 버스</div>
 				<div class="busanTextBox">
-					<div class="busanText1">광안리 해수욕장 입구, 국민은행 광안동지점 앞</div>
-					<div class="busanText2">아침 7시 출발 (6시 30분부터 대기)<br></div>
+					<div class="busanText0">국민은행 광안동지점 앞<br>(광안리 해수욕장 입구)</div>
+					<div class="busanText2">2월 25일 아침 7시 출발 (6시 30분부터 대기)<br></div>
 					<div class="busanText2">버스 탑승 : 뉴부산관광 (부산 70바 2172)<br></div>
 				</div>
 					<div class="busanTextTitle">
-						지하철<br>
+						지&nbsp;하&nbsp;철<br>
 					</div>
 					<div class="busanText2">
 						2호선 광안역 5번 출구 엘리베이터 앞<br>
 					</div>
 					<div class="busanTextTitle">
-						버  스<br>
+						버&nbsp;&nbsp;&nbsp;&nbsp;스<br>
 					</div>
 					<div class="busanText2">
 						62, 42, 38, 49번 : 광안리 입구 하차<br>
 						51번 : 수영중학교 하차<br>
 					</div>
 					<div class="busanTextTitle">
-						문의<br>
+						문&nbsp;&nbsp;&nbsp;&nbsp;의<br>
 					</div>
 					<div class="busanText2">
 						박근  010-4589-0559 (신랑측 작은아버지)<br>

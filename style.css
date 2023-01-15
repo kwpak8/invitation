@@ -54,7 +54,8 @@ div {
 .chapterTitle{
 	font-weight: 900;
 	margin-bottom:20px;
-	margin-top:200px;
+	margin-top:300px;
+	margin-bottom:50px;
 	font-size:40pt;
 }
 
@@ -107,7 +108,7 @@ div {
 }
 
 #photoList {
-	width:400%;
+	width:1200%;
 	height:100%;
 	float:left;
 }
@@ -124,54 +125,19 @@ div {
 
 #photoBtnList{
 	width:974px;
-	height:200px;
+	height:600px;
 	margin:0 auto;
+	margin-top:20px;	
 }
 
 .photoBtn{
 	width:25%;
-	height:100%;	
+	height:200px;
 	float:left;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	margin-top:20px;
 }
-
-#photo1 {
-	background-image:url(images/photo1.jpg);
-}
-
-#photo2 {
-	background-image:url(images/photo2.jpg);
-}
-
-#photo3 {
-	background-image:url(images/photo3.jpg);
-}
-
-#photo4 {
-	background-image:url(images/photo4.jpg);
-}
-
-#photoBtn1 {
-	background-image:url(images/photo1.jpg);
-}
-
-#photoBtn2 {
-	background-image:url(images/photo2.jpg);
-}
-
-#photobtn3 {
-	background-image:url(images/photo3.jpg);
-}
-
-#photoBtn4 {
-	background-image:url(images/photo4.jpg);
-}
-
-
-
 .textBox {
 	background: #fff;
 	margin: auto;
@@ -184,7 +150,7 @@ div {
 	padding-bottom:400px;
 	line-height: 100px;
 	background-color:#08338833;
-	background: linear-gradient(0deg, rgba(8,51,136,0) 0%, rgba(8,51,136,0.25) 20%, rgba(8,51,136,0.25) 80%, rgba(8,51,136,0) 100%);
+	background: linear-gradient(0deg, rgba(8,51,136,0) 0%, rgba(8,51,136,0.1) 20%, rgba(8,51,136,0.1) 80%, rgba(8,51,136,0) 100%);
 }
 
 .mapTextBox {
@@ -286,7 +252,7 @@ div {
 	top:50%;
 	left:50%;
 	width:800px;
-	height:950px;
+	height:1000px;
 	padding:20px;
 	padding-top:30px;
 	background-color:#fff;
@@ -300,11 +266,10 @@ div {
 	top:50%;
 	left:50%;
 	width:800px;
-	height:860px;
+	height:1000px;
 	padding:20px;
 	padding-top:30px;
 	background-color:#fff;
-	line-height: 70px;
 	transform:translate(-50%, -50%);
 	z-index:2;	
 }
@@ -315,25 +280,30 @@ div {
 }
 
 .busanTextBox {
-	font-size:25pt;
+	font-size:28pt;
+	line-height: 50px;
+}
+
+.busanText0 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	line-height: 60px;
+	font-weight: 900;
+	font-size:35pt;
 }
 
 .busanText1 {
 	font-weight: 900;
-	line-height: 50px;
-	font-size:25pt;	
 }
 
 .busanText2 {
-	line-height: 50px;
-	font-size:25pt;	
+
 }
 
 .busanTextTitle{
-	font-weight:900;	
-	margin-top:25px;
-	font-size:25pt;
-	line-height: 50px;
+	font-weight:900;
+	margin-top:40px;
+	line-height: 45px;
 }
 
 #accountBoxTitle{
@@ -343,15 +313,15 @@ div {
 .accountClose {
 	position:relative;
 	width:740px;
-	height:100px;
+	height:140px;
 	margin:0 auto;
 	margin-top:70px;
-	line-height: 100px;
+	line-height: 140px;
 	background-color:#083388;
 	color:white;
 	cursor:pointer;
 	z-index:2;
-	font-size:30pt;
+	font-size:35pt;
 }
 
 .accountTitle {
@@ -406,5 +376,10 @@ div {
 	.accountList {
 		transform-origin: 0% 0%;
 		transform: scale(0.8, 0.8) translate(-50%, -50%);;	
+	}
+
+	#busanList {
+		transform-origin: 0% 0%;
+		transform: scale(0.8, 0.8) translate(-50%, -50%);;		
 	}
 }
