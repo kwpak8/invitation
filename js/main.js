@@ -15,7 +15,7 @@ function ScrollSetting(){
 		scrollTimer = setTimeout(() => {
 			scrollTimer = null;			
 			NaviSetting(photoScroll.scrollLeft);
-		},100);	
+		},300);	
 	}
 })
 }
@@ -77,7 +77,7 @@ function PhotoPopupOpen(photoNum){
 
 function PhotoNavi(photoNum){
 	if(!photoMoveNow){
-		PhotoDotSetting(photoNum);
+		//PhotoDotSetting(photoNum);
 
 		photoMoveNow = true;
 		var galleryBox = document.getElementById('galleryBox');	
