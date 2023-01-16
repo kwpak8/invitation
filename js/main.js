@@ -15,19 +15,31 @@ function ScrollSetting(){
 		scrollTimer = setTimeout(() => {
 			scrollTimer = null;			
 			NaviSetting(photoScroll.scrollLeft);
-		},500);	
+		},100);	
 	}
 })
 }
 
 function NaviSetting(scrollLeft){
 	var width = galleryBox.clientWidth;
+	var leftWidth = scrollLeft%width;
 	//console.log(scrollLeft%width);
-	if(scrollLeft%width == 0){
+	if(leftWidth == 0){
 		photoNum = scrollLeft/width + 1;
 		//console.log(photoNum);
 		PhotoDotSetting(photoNum);
+	}else{
+		if(leftWidth > width/2){
+			photoNum = (scrollLeft-leftWidth)/width + 2;
+			console.log(photoNum);
+			PhotoDotSetting(photoNum);
+		}else{
+			photoNum = (scrollLeft-leftWidth)/width + 1;
+			console.log(photoNum);
+			PhotoDotSetting(photoNum);
+		}
 	}
+	
 }
 
 
