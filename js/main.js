@@ -93,9 +93,9 @@ function PhotoNavi(photoNum){
 function PhotoDotSetting(photoNum){
 	var naviBtn = document.getElementsByClassName('photoNaviBtn');	
 	for(var i = 0; i < naviBtn.length; i++){
-		naviBtn[i].style.color = "#083388";
+		naviBtn[i].style.color = "#5a9cd5";
 	}
-	naviBtn[photoNum-1].style.color = "#c27e41";
+	naviBtn[photoNum-1].style.color = "#f3ac54";
 }
 
 function PhotoMove(photoTargetX){
